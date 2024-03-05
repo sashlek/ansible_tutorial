@@ -7,3 +7,6 @@ osboxes@192.168.1.251
 
 [file_servers]
 osboxes@192.168.1.249
+
+[workstations]
+osboxes@192.168.1.249
