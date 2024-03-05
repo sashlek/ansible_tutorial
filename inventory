@@ -1,3 +1,9 @@
-osboxes@192.168.1.250 apache_package=apache2 php_package=libapache2-mod-php
-osboxes@192.168.1.251 apache_package=apache2 php_package=libapache2-mod-php
-root@192.168.1.252    apache_package=httpd php_package=php
+[web_servers]
+osboxes@192.168.1.250
+root@192.168.1.252
+
+[db_servers]
+osboxes@192.168.1.251
+
+[file_servers]
+osboxes@192.168.1.249
