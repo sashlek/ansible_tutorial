@@ -4,30 +4,19 @@
   become: true
   pre_tasks:
 
-  - name: update repo cache (CentOS)
+  - name: install updates (CentOS)
     tags: always
     dnf:
+      update_only: yes
       update_cache: yes
-    changed_when: false
     when: ansible_distribution == "CentOS"
 
-  - name: update repo cache (Ubuntu)
+  - name: install updates (Ubuntu)
     tags: always
     apt:
+      upgrade: dist
       update_cache: yes
-    changed_when: false
     when: ansible_distribution == "Ubuntu"
-
-
-- hosts: all
-  become: true
-  tasks:
-
-  - name: add ssh key for sasa
-    tags: always
-    authorized_key:
-      user: sasa
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICD8At8b4CAgJaWdSNBk03Rq2BORrQk+muTBiN1UIO6g ansible"
 
 
 - hosts: workstations
