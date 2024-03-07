@@ -1,0 +1,4 @@
+- name: add ssh key for sasa
+  authorized_key:
+    user: sasa
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICD8At8b4CAgJaWdSNBk03Rq2BORrQk+muTBiN1UIO6g ansible"
