@@ -26,7 +26,7 @@
   package:
     name: unzip
 
-- name: copy default html file for site
+- name: unzip files from clock-main.zip for site
   tags: apache,apache2,httpd
   unarchive:
     src: clock-main.zip
